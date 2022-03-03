@@ -1,0 +1,86 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.travelapp"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'com.github.xuexiangjys:XUI:1.1.8'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    //屏幕适配AutoSize
+    implementation 'me.jessyan:autosize:1.1.2'
+    //腾讯的键值对存储mmkv
+    implementation 'com.tencent:mmkv:1.2.10'
+    //基础功能的工具类
+    implementation 'com.github.xuexiangjys.XUtil:xutil-core:2.0.0'
+    //网络通信库
+    implementation "com.squareup.okhttp3:okhttp:3.14.9"
+    //drawerlayout
+    implementation 'com.yarolegovich:sliding-root-nav:1.1.1'
+    //悬浮按钮
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+    //jsoup
+    implementation 'org.jsoup:jsoup:1.14.3'
+    //PictureSelector图片选择
+    implementation 'com.github.xuexiangjys.PictureSelector:picture-core:1.0.5'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //fastJson依赖
+    implementation 'com.alibaba:fastjson:1.2.76'
+    //高德地图
+    implementation 'com.amap.api:navi-3dmap:latest.integration'
+    implementation 'com.amap.api:search:latest.integration'
+    //cityPicker
+    implementation 'com.github.zaaach:CityPicker:2.1.0'
+    //聊天
+    implementation "org.java-websocket:Java-WebSocket:1.5.2"
+    //room
+    def room_version = "2.2.6"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    implementation "org.reactivestreams:reactive-streams:1.0.2"
+    //下拉刷新
+    implementation 'com.github.xuexiangjys.SmartRefreshLayout:refresh-header:1.1.5'
+    implementation 'com.github.xuexiangjys.SmartRefreshLayout:refresh-layout:1.1.5'
+}

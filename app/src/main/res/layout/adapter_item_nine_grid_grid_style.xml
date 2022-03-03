@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@color/color_f4"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <com.xuexiang.xui.widget.imageview.nine.NineGridImageView
+        android:id="@+id/ngl_images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:ngiv_imgGap="3dp"
+        app:ngiv_showStyle="grid"
+        app:ngiv_singleImgSize="500dp" />
+
+</LinearLayout>

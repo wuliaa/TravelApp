@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@color/xui_config_color_white" />
+
+    <item android:bottom="250dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/logo" />
+    </item>
+
+    <item android:bottom="50dp">
+        <bitmap
+            android:gravity="center"
+            android:src="@drawable/slogen" />
+    </item>
+
+    <item android:bottom="0dp">
+        <bitmap
+            android:gravity="bottom"
+            android:src="@drawable/splash_bg" />
+    </item>
+</layer-list>

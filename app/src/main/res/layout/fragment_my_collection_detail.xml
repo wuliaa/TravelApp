@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tb"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/select">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/collection_detail_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    app:srcCompat="@drawable/ic_round_arrow_back_ios_blue_24" />
+
+                <ImageView
+                    android:id="@+id/collection_detail_avatar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/head" />
+
+                <TextView
+                    android:id="@+id/collection_detail_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="inny"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/collection_detail_contact_imageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="68dp"
+                app:srcCompat="@drawable/contact" />
+
+            <TextView
+                android:id="@+id/collection_detail_contact_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="18dp"
+                android:text="联系TA"
+                android:textColor="@color/xui_config_color_75_pure_black"
+                android:textSize="14sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/main_content"
+        android:layout_below="@id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/page_above_container"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/collection_detail_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:overScrollMode="never" />
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/collection_detail_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="sans-serif-black"
+                            android:text="标题"
+                            android:textColor="@color/xui_config_color_75_pure_black"
+                            android:textSize="16sp" />
+
+                        <com.xuexiang.xui.widget.imageview.RadiusImageView
+                            android:id="@+id/collection_map"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="30dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:src="@drawable/map"
+                            app:riv_border_color="@color/xui_config_color_gray_6"
+                            app:riv_border_width="1dp"
+                            app:riv_corner_radius="10dp"
+                            app:riv_selected_border_color="@color/xui_config_color_gray_4"
+                            app:riv_selected_border_width="1dp"
+                            app:riv_selected_mask_color="@color/xui_config_color_gray_8" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/collection_detail_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:minLines="6"
+                        android:text="内容"
+                        android:textColor="@color/xui_config_color_75_pure_black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/collection_detail_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="地址"
+                        android:textColor="@color/xui_config_color_75_pure_black"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/ic_round_location_on_24" />
+
+                    <TextView
+                        android:id="@+id/collection_detail_create_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray_icon"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/collection_detail_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="5dp"
+                        android:text="@string/weather"
+                        android:textColor="@color/gray_icon"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/ic_baseline_wb_sunny_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray_icon"
+                        android:textSize="14sp"
+                        android:text="评 论"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/page_comment_container"
+                    android:layout_below="@+id/page_above_container"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="60dp"
+                    android:orientation="vertical">
+
+                    <com.example.travelapp.customview.CommentExpandableListView
+                        android:id="@+id/collection_detail_page_lv_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@null"
+                        android:listSelector="@android:color/transparent"
+                        android:scrollbars="none"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/collection_no_comments"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/gray_icon"
+                        android:textSize="14sp"
+                        android:text="暂时没有人评论噢~"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f3f3f3"
+        android:focusable="true"
+        android:layout_alignParentBottom="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp">
+            <EditText
+                android:id="@+id/collection_comment_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/message_shap_chat_bg"
+                android:maxLines="3"
+                android:hint="说点什么吧..."
+                android:minHeight="36dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+        <Button
+            style="@style/Button.Radius"
+            android:id="@+id/collection_comment_btn_send"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:text="评论"
+            android:textSize="13sp"
+            android:focusable="true" />
+        <com.xuexiang.xui.widget.button.shinebutton.ShineButton
+            android:id="@+id/collection_shine_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="6dp"
+            android:src="@android:color/darker_gray"
+            app:sb_allow_random_color="false"
+            app:sb_big_shine_color="#FF6666"
+            app:sb_checked_color="#FF6666"
+            app:sb_click_animation_duration="200"
+            app:sb_enable_flashing="false"
+            app:sb_icon_image="@drawable/ic_star"
+            app:sb_normal_color="@android:color/darker_gray"
+            app:sb_shine_animation_duration="1500"
+            app:sb_shine_count="15"
+            app:sb_shine_distance_multiple="1.5"
+            app:sb_shine_turn_angle="10"
+            app:sb_small_shine_color="#CC9999"
+            app:sb_small_shine_offset_angle="20" />
+
+        <TextView
+            android:id="@+id/collection_detail_star_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="15dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="收藏"
+            android:textColor="@color/xui_config_color_75_pure_black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    <style name="Theme.TravelApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">-->
+<!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
+<!--        <item name="colorPrimary">@color/purple_500</item>-->
+<!--        <item name="colorPrimaryVariant">@color/purple_700</item>-->
+<!--        <item name="colorOnPrimary">@color/white</item>-->
+<!--        &lt;!&ndash; Secondary brand color. &ndash;&gt;-->
+<!--        <item name="colorSecondary">@color/teal_200</item>-->
+<!--        <item name="colorSecondaryVariant">@color/teal_700</item>-->
+<!--        <item name="colorOnSecondary">@color/black</item>-->
+<!--        &lt;!&ndash; Status bar color. &ndash;&gt;-->
+<!--        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>-->
+<!--        &lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+<!--    </style>-->
+    <style name="AppTheme" parent="XUITheme.Phone">
+        <!-- Customize your own theme style -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+<!--    <attr format="reference" name="xui_config_splash_app_logo"/>-->
+<!--    <attr format="reference" name="xui_config_splash_company_logo"/>-->
+<!--    &lt;!&ndash;窗体背景，这个背景能在第一时间显示, 避免启动时白屏，黑屏问题&ndash;&gt;-->
+<!--    <style name="AppTheme.Launch">-->
+<!--        &lt;!&ndash;注意修改图标&ndash;&gt;-->
+<!--        <item name="xui_config_splash_app_logo">@drawable/splash</item>-->
+<!--        <item name="xui_config_splash_company_logo">@drawable/bg</item>-->
+<!--    </style>-->
+    <style name="AppTheme.SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/config_bg_splash</item>
+    </style>
+
+    <style name="SuperButton.Primary.Login">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">50dp</item>
+        <item name="android:layout_marginEnd">50dp</item>
+        <item name="sCornersRadius">20dp</item>
+        <item name="sSelectorNormalColor">?attr/colorAccent</item>
+        <item name="sSelectorPressedColor">?attr/colorAccent</item>
+        <item name="android:textColor">@color/xui_config_color_white</item>
+    </style>
+
+    <!--图片选择的主题，注意每一项都不能少-->
+    <style name="XUIPictureStyle" parent="XUITheme.Phone">
+        <!-- Customize your theme here. -->
+        <!--标题栏背景色-->
+        <item name="colorPrimary">?attr/colorAccent</item>
+        <!--状态栏背景色-->
+        <item name="colorPrimaryDark">?attr/colorAccent</item>
+        <!--是否改变图片列表界面状态栏字体颜色为黑色-->
+        <item name="picture_statusFontColor">false</item>
+        <!--返回键图标-->
+        <item name="picture_leftBack_icon">@drawable/xui_ic_navigation_back_white</item>
+        <!--title图标文字的padding-->
+        <item name="picture_title_action_padding">?attr/xui_actionbar_side_text_padding</item>
+        <!--标题下拉箭头-->
+        <item name="picture_arrow_down_icon">@drawable/pic_arrow_down</item>
+        <!--标题上拉箭头-->
+        <item name="picture_arrow_up_icon">@drawable/pic_arrow_up</item>
+        <!--标题文字颜色-->
+        <item name="picture_title_textColor">?attr/xui_actionbar_text_color</item>
+        <!--标题栏右边文字-->
+        <item name="picture_right_textColor">?attr/xui_actionbar_text_color</item>
+        <!--标题文字大小-->
+        <item name="picture_title_textSize">?attr/xui_actionbar_title_text_size</item>
+        <!--标题栏右边文字大小-->
+        <item name="picture_right_textSize">?attr/xui_actionbar_action_text_size</item>
+        <!--标题文字是否加粗-->
+        <item name="picture_title_text_bold">false</item>
+        <!--标题栏右边文字是否加粗-->
+        <item name="picture_right_text_bold">false</item>
+        <!--图片列表勾选样式-->
+        <item name="picture_checked_style">@drawable/xui_icon_checkbox</item>
+        <!--开启图片列表勾选数字模式,开启的话勾选样式要换-->
+        <item name="picture_style_checkNumMode">false</item>
+        <!--选择图片样式0/9-->
+        <item name="picture_style_numComplete">false</item>
+        <!--图片列表底部背景色-->
+        <item name="picture_bottom_bg">@color/color_f4</item>
+        <!--图片列表预览文字颜色-->
+        <item name="picture_preview_textColor">@color/picture_tab_color_false</item>
+        <!--图片列表已完成文字颜色-->
+        <item name="picture_complete_textColor">@color/picture_tab_color_true</item>
+        <!--图片已选数量圆点背景色-->
+        <item name="picture_num_style">@drawable/picture_dot_oval</item>
+        <!--预览界面标题栏背景色-->
+        <item name="picture_ac_preview_title_bg">?attr/colorAccent</item>
+        <!--预览界面标题文字颜色-->
+        <item name="picture_ac_preview_title_textColor">?attr/xui_actionbar_text_color</item>
+        <!--预览界面标题文字大小-->
+        <item name="picture_ac_preview_title_textSize">?attr/xui_actionbar_title_text_size</item>
+        <!--预览界面标题文字是否加粗-->
+        <item name="picture_ac_preview_title_text_bold">false</item>
+        <!--预览界面已完成文字颜色-->
+        <item name="picture_ac_preview_complete_textColor">@color/picture_tab_color_true</item>
+        <!--预览界面底部背景色-->
+        <item name="picture_ac_preview_bottom_bg">@color/color_f4</item>
+        <!--预览界面返回箭头-->
+        <item name="picture_preview_leftBack_icon">@drawable/xui_ic_navigation_back_white</item>
+        <!--裁剪页面标题背景色-->
+        <item name="picture_crop_toolbar_bg">?attr/colorAccent</item>
+        <!--裁剪页面状态栏颜色-->
+        <item name="picture_crop_status_color">?attr/colorAccent</item>
+        <!--裁剪页面标题文字颜色-->
+        <item name="picture_crop_title_color">?attr/xui_actionbar_text_color</item>
+        <!--相册文件夹列表选中图标-->
+        <item name="picture_folder_checked_dot">@drawable/picture_dot_oval</item>
+    </style>
+
+
+    <!--图片选择的主题，注意每一项都不能少-->
+    <style name="XUIPictureStyle.Custom">
+        <item name="colorAccent">@color/custom_color_main_theme</item>
+        <!--应用的主要色调，actionBar默认使用该颜色，Toolbar导航栏的底色-->
+        <item name="colorPrimary">@color/custom_color_main_theme</item>
+        <!--应用的主要暗色调，statusBarColor默认使用该颜色-->
+        <item name="colorPrimaryDark">@color/custom_color_main_theme</item>
+        <item name="colorControlNormal">@color/xui_config_color_control_normal</item>
+
+        <!--图片列表勾选样式-->
+        <item name="picture_checked_style">@drawable/custom_icon_checkbox</item>
+    </style>
+
+    <!--实现BottomSheetDialog圆角效果 且无背景阴影-->
+    <style name="BottomSheetDialogBg" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+
+</resources>

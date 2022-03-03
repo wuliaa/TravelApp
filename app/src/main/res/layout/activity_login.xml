@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+    </ProgressBar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginTop="50dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center_horizontal"
+            app:srcCompat="@mipmap/my_ic_launcher" />
+
+
+        <TextView
+            style="@style/TextStyle.Title"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:text="登 录"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:tint="?attr/colorAccent"
+                    app:srcCompat="@drawable/ic_phone" />
+
+                <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                    android:id="@+id/et_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:hint="@string/tip_please_input_user_name"
+                    android:inputType="textPersonName"
+                    app:met_clearButton="true"
+                    app:met_floatingLabel="normal"/>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fl_verify_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center_vertical"
+                    android:tint="?attr/colorAccent"
+                    app:srcCompat="@drawable/ic_password" />
+
+                <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                    android:id="@+id/et_pass_word"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:hint="@string/hint_please_input_pass_word"
+                    android:inputType="numberPassword"
+                    app:met_clearButton="false" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.xuexiang.xui.widget.alpha.XUIAlphaTextView
+                    android:id="@+id/tv_go_register"
+                    style="@style/TextStyle.Explain"
+                    android:layout_gravity="start"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="去注册"
+                    android:textColor="@color/xui_config_color_primary_text" />
+
+                <com.xuexiang.xui.widget.alpha.XUIAlphaTextView
+                    android:id="@+id/tv_forget_password"
+                    style="@style/TextStyle.Explain"
+                    android:layout_gravity="end"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="忘记密码"
+                    android:textColor="@color/xui_config_color_primary_text" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+            android:id="@+id/btn_login"
+            style="@style/SuperButton.Primary.Login"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_login" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:paddingTop="130dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/bg" />
+
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <com.xuexiang.xui.widget.imageview.RadiusImageView
+        android:id="@+id/user_head"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/head"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        app:riv_border_color="@color/xui_config_color_gray_6"
+        app:riv_border_width="1px"
+        app:riv_is_circle="true"
+        app:riv_selected_border_color="@color/xui_config_color_gray_4"
+        app:riv_selected_border_width="1px"
+        app:riv_selected_mask_color="@color/xui_config_color_gray_8"
+        android:focusable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="24dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="?attr/colorAccent"
+                app:srcCompat="@drawable/ic_phone" />
+
+            <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                android:id="@+id/et_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:hint="@string/tip_please_input_user_name"
+                android:inputType="textPersonName"
+                app:met_clearButton="true"
+                app:met_floatingLabel="normal"/>
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:tint="?attr/colorAccent"
+                app:srcCompat="@drawable/ic_password" />
+
+            <com.xuexiang.xui.widget.edittext.materialedittext.MaterialEditText
+                android:id="@+id/et_pass_word"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:hint="@string/hint_please_input_pass_word"
+                android:inputType="numberPassword"
+                app:met_clearButton="false" />
+
+        </FrameLayout>
+
+        <com.xuexiang.xui.widget.textview.supertextview.SuperButton
+            android:id="@+id/btn_register"
+            style="@style/SuperButton.Primary.Login"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_register" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/r_bg"
+        android:layout_gravity="bottom"/>
+</FrameLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TravelApp</string>
+    <string name="tip_please_input_user_name">请输入用户名</string>
+    <string name="hint_please_input_pass_word">请输入用户密码</string>
+    <string name="title_login">登录</string>
+    <string name="title_register">注册</string>
+
+    <string name="lab_logout_confirm">是否确认退出？</string>
+    <string name="lab_yes">是</string>
+    <string name="lab_no">否</string>
+
+    <string name="serverBasePath">http://10.242.253.199:8080/travelserver/</string>
+    <string name="travellingGuideline">旅游攻略</string>
+    <string name="recognize_landmark">识别地标</string>
+    <string name="post_travel_guideline">发表你的攻略</string>
+    <string name="write_guideline_title">标题填写</string>
+    <string name="add_text">添加正文</string>
+    <string name="add_address">添加地标名称</string>
+    <string name="post_guideline">发布攻略</string>
+    <string name="back">返回</string>
+    <string name="tip_options">选择地标识别方式</string>
+    <string name="weather">天气</string>
+    <string name="check_out">是否确认退出程序？</string>
+    <string name="check_delete">是否删除该旅游攻略？</string>
+    <string name="check_post_guideline">是否要发布旅游攻略？</string>
+</resources>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_toolbar" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tb">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/my_guide_detail_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:overScrollMode="never">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:id="@+id/my_guide_detail_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="标题"
+                        android:textColor="@color/xui_config_color_75_pure_black"
+                        android:textSize="16sp" />
+
+
+                    <TextView
+                        android:id="@+id/my_guide_detail_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:minLines="6"
+                        android:text="内容"
+                        android:textColor="@color/xui_config_color_75_pure_black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/my_guide_detail_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:text="地址"
+                        android:textColor="@color/xui_config_color_75_pure_black"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/ic_round_location_on_24" />
+
+                    <TextView
+                        android:id="@+id/my_guide_detail_create_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/gray_icon"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/my_guide_detail_weather"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="5dp"
+                        android:text="@string/weather"
+                        android:textColor="@color/gray_icon"
+                        android:textSize="14sp"
+                        app:drawableStartCompat="@drawable/ic_baseline_wb_sunny_24" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="评 论"
+                        android:textColor="@color/gray_icon"
+                        android:textSize="14sp" />
+
+                    <LinearLayout
+                        android:id="@+id/page_comment_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="60dp"
+                        android:orientation="vertical">
+
+                        <com.example.travelapp.customview.CommentExpandableListView
+                            android:id="@+id/my_guideline_detail_page_lv_comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@null"
+                            android:listSelector="@android:color/transparent"
+                            android:scrollbars="none" />
+
+                        <TextView
+                            android:id="@+id/my_guideline_no_comments"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:text="暂时没有人评论噢~"
+                            android:textColor="@color/gray_icon"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="#f3f3f3"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="8dp"
+            android:paddingTop="6dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="6dp">
+
+            <EditText
+                android:id="@+id/my_guideline_comment_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/message_shap_chat_bg"
+                android:hint="说点什么吧..."
+                android:maxLines="3"
+                android:minHeight="36dp"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/my_guideline_comment_btn_send"
+            style="@style/Button.Radius"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="评论"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/my_guide_detail_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="15dp"
+            android:drawablePadding="5dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="删除"
+            android:textColor="@color/xui_config_color_75_pure_black"
+            android:textSize="15sp"
+            app:drawableStartCompat="@drawable/ic_round_delete_24" />
+    </LinearLayout>
+</FrameLayout>
